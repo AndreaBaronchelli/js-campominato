@@ -13,14 +13,32 @@
 // con difficoltà 1 => tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
 
-var numeroMax = 100;
+var numeroMax;
 var numeroBombe = 16;
-var possibilita = numeroMax - numeroBombe;
 var numeriUsati = [];
 var numeriBombe = [];
 var numeroUtente = 0;
 
 //BONUS
+var livello = prompt("Seleziona un livello di difficoltà:\nFacile\nMedio\nDifficile").toLowerCase().trim();
+//Validazione livello
+while(livello !== "facile" && livello !== "medio" && livello !== "difficile") {
+    alert("Valore errato. Riprova");
+    livello = prompt("Seleziona un livello di difficoltà:\nFacile\nMedio\nDifficile").toLowerCase().trim();
+}
+
+switch (livello) {
+    case "facile":
+        numeroMax = 100;
+        break;
+        case "medio":
+            numeroMax = 80;
+            break;
+            case "difficile":
+                numeroMax = 50;
+}
+            
+var possibilita = numeroMax - numeroBombe;
 
 // Creazione arrey bombe
 while(numeriBombe.length < numeroBombe) {
