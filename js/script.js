@@ -31,11 +31,11 @@ switch (livello) {
     case "facile":
         numeroMax = 100;
         break;
-        case "medio":
-            numeroMax = 80;
-            break;
-            case "difficile":
-                numeroMax = 50;
+    case "medio":
+        numeroMax = 80;
+        break;
+    case "difficile":
+        numeroMax = 50;
 }
             
 var possibilita = numeroMax - numeroBombe;
