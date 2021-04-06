@@ -13,16 +13,18 @@
 // con difficoltà 1 => tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
 
-var numeroMax = 10;
-var numeroBombe = 2;
+var numeroMax = 100;
+var numeroBombe = 16;
 var possibilita = numeroMax - numeroBombe;
 var numeriUsati = [];
 var numeriBombe = [];
 var numeroUtente = 0;
 
+//BONUS
+
 // Creazione arrey bombe
 while(numeriBombe.length < numeroBombe) {
-    var numeroRandom = randNumb(1, 10);
+    var numeroRandom = randNumb(1, numeroMax);
     if( !numeriBombe.includes(numeroRandom) ) {
         numeriBombe.push(numeroRandom);
     }
@@ -52,6 +54,7 @@ while( (!numeriBombe.includes(numeroUtente)) && numeriUsati.length < possibilita
 
 }
 
+console.log("Hai totalizzato " + numeriUsati.length + " punti su " + possibilita );
 console.log("GAME OVER");
 
 // UTILITIES
